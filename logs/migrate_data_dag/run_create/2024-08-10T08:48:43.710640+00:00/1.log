@@ -1,0 +1,111 @@
+[2024-08-10 08:48:46,139] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: migrate_data_dag.run_create 2024-08-10T08:48:43.710640+00:00 [queued]>
+[2024-08-10 08:48:46,149] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: migrate_data_dag.run_create 2024-08-10T08:48:43.710640+00:00 [queued]>
+[2024-08-10 08:48:46,149] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-10 08:48:46,149] {taskinstance.py:1069} INFO - Starting attempt 1 of 2
+[2024-08-10 08:48:46,149] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-10 08:48:46,161] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): run_create> on 2024-08-10T08:48:43.710640+00:00
+[2024-08-10 08:48:46,164] {standard_task_runner.py:52} INFO - Started process 32189 to run task
+[2024-08-10 08:48:46,167] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'migrate_data_dag', 'run_create', '2024-08-10T08:48:43.710640+00:00', '--job-id', '147', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmp8ah90mct', '--error-file', '/tmp/tmp6exuubgp']
+[2024-08-10 08:48:46,170] {standard_task_runner.py:77} INFO - Job 147: Subtask run_create
+[2024-08-10 08:48:46,204] {logging_mixin.py:104} INFO - Running <TaskInstance: migrate_data_dag.run_create 2024-08-10T08:48:43.710640+00:00 [running]> on host bcea38538591
+[2024-08-10 08:48:46,236] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=migrate_data_dag
+AIRFLOW_CTX_TASK_ID=run_create
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-10T08:48:43.710640+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-10T08:48:43.710640+00:00
+[2024-08-10 08:48:46,243] {base.py:78} INFO - Using connection to: id: postgres_source. Host: postgres, Port: 5432, Schema: source, Login: postgres, Password: XXXXXXXX, extra: None
+[2024-08-10 08:48:46,251] {base.py:78} INFO - Using connection to: id: mysql_dest. Host: mysql-db-migrate, Port: 3306, Schema: db, Login: root, Password: XXXXXXXX, extra: None
+[2024-08-10 08:48:46,270] {logging_mixin.py:104} INFO - Processing table: film_actor
+[2024-08-10 08:48:46,290] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `film_actor` (`actor_id` INT NOT NULL, `film_id` INT NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`actor_id`, `film_id`))
+[2024-08-10 08:48:46,302] {logging_mixin.py:104} INFO - Table `film_actor` created successfully.
+[2024-08-10 08:48:46,302] {logging_mixin.py:104} INFO - Processing table: address
+[2024-08-10 08:48:46,311] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `address` (`address_id` INT NOT NULL, `address` TEXT NOT NULL, `address2` TEXT, `district` TEXT NOT NULL, `city_id` INT NOT NULL, `postal_code` TEXT, `phone` TEXT NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`address_id`))
+[2024-08-10 08:48:46,322] {logging_mixin.py:104} INFO - Table `address` created successfully.
+[2024-08-10 08:48:46,322] {logging_mixin.py:104} INFO - Processing table: city
+[2024-08-10 08:48:46,331] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `city` (`city_id` INT NOT NULL, `city` TEXT NOT NULL, `country_id` INT NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`city_id`))
+[2024-08-10 08:48:46,342] {logging_mixin.py:104} INFO - Table `city` created successfully.
+[2024-08-10 08:48:46,342] {logging_mixin.py:104} INFO - Processing table: actor
+[2024-08-10 08:48:46,354] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `actor` (`actor_id` INT NOT NULL, `first_name` TEXT NOT NULL, `last_name` TEXT NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`actor_id`))
+[2024-08-10 08:48:46,368] {logging_mixin.py:104} INFO - Table `actor` created successfully.
+[2024-08-10 08:48:46,368] {logging_mixin.py:104} INFO - Processing table: actor_info
+[2024-08-10 08:48:46,378] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `actor_info` (`actor_id` INT, `first_name` TEXT, `last_name` TEXT, `film_info` TEXT)
+[2024-08-10 08:48:46,393] {logging_mixin.py:104} INFO - Table `actor_info` created successfully.
+[2024-08-10 08:48:46,393] {logging_mixin.py:104} INFO - Processing table: category
+[2024-08-10 08:48:46,402] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `category` (`category_id` INT NOT NULL, `name` TEXT NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`category_id`))
+[2024-08-10 08:48:46,413] {logging_mixin.py:104} INFO - Table `category` created successfully.
+[2024-08-10 08:48:46,413] {logging_mixin.py:104} INFO - Processing table: country
+[2024-08-10 08:48:46,422] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `country` (`country_id` INT NOT NULL, `country` TEXT NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`country_id`))
+[2024-08-10 08:48:46,434] {logging_mixin.py:104} INFO - Table `country` created successfully.
+[2024-08-10 08:48:46,434] {logging_mixin.py:104} INFO - Processing table: customer
+[2024-08-10 08:48:46,444] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `customer` (`customer_id` INT NOT NULL, `store_id` INT NOT NULL, `first_name` TEXT NOT NULL, `last_name` TEXT NOT NULL, `email` TEXT, `address_id` INT NOT NULL, `activebool` BOOLEAN NOT NULL, `create_date` DATE NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, `active` INT, PRIMARY KEY (`customer_id`))
+[2024-08-10 08:48:46,456] {logging_mixin.py:104} INFO - Table `customer` created successfully.
+[2024-08-10 08:48:46,456] {logging_mixin.py:104} INFO - Processing table: customer_list
+[2024-08-10 08:48:46,465] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `customer_list` (`id` INT, `name` TEXT, `address` TEXT, `zip code` TEXT, `phone` TEXT, `city` TEXT, `country` TEXT, `notes` TEXT, `sid` INT)
+[2024-08-10 08:48:46,476] {logging_mixin.py:104} INFO - Table `customer_list` created successfully.
+[2024-08-10 08:48:46,476] {logging_mixin.py:104} INFO - Processing table: film_list
+[2024-08-10 08:48:46,485] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `film_list` (`fid` INT, `title` TEXT, `description` TEXT, `category` TEXT, `price` DECIMAL(4,2), `length` SMALLINT, `rating` LONGTEXT, `actors` TEXT)
+[2024-08-10 08:48:46,496] {logging_mixin.py:104} INFO - Table `film_list` created successfully.
+[2024-08-10 08:48:46,496] {logging_mixin.py:104} INFO - Processing table: nicer_but_slower_film_list
+[2024-08-10 08:48:46,504] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `nicer_but_slower_film_list` (`fid` INT, `title` TEXT, `description` TEXT, `category` TEXT, `price` DECIMAL(4,2), `length` SMALLINT, `rating` LONGTEXT, `actors` TEXT)
+[2024-08-10 08:48:46,516] {logging_mixin.py:104} INFO - Table `nicer_but_slower_film_list` created successfully.
+[2024-08-10 08:48:46,516] {logging_mixin.py:104} INFO - Processing table: film
+[2024-08-10 08:48:46,525] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `film` (`film_id` INT NOT NULL, `title` TEXT NOT NULL, `description` TEXT, `release_year` INT, `language_id` INT NOT NULL, `original_language_id` INT, `rental_duration` SMALLINT NOT NULL, `rental_rate` DECIMAL(4,2) NOT NULL, `length` SMALLINT, `replacement_cost` DECIMAL(5,2) NOT NULL, `rating` LONGTEXT, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, `special_features` JSON, `fulltext` LONGTEXT NOT NULL, PRIMARY KEY (`film_id`))
+[2024-08-10 08:48:46,536] {logging_mixin.py:104} INFO - Table `film` created successfully.
+[2024-08-10 08:48:46,537] {logging_mixin.py:104} INFO - Processing table: film_category
+[2024-08-10 08:48:46,545] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `film_category` (`film_id` INT NOT NULL, `category_id` INT NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`film_id`, `category_id`))
+[2024-08-10 08:48:46,557] {logging_mixin.py:104} INFO - Table `film_category` created successfully.
+[2024-08-10 08:48:46,557] {logging_mixin.py:104} INFO - Processing table: inventory
+[2024-08-10 08:48:46,567] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `inventory` (`inventory_id` INT NOT NULL, `film_id` INT NOT NULL, `store_id` INT NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`inventory_id`))
+[2024-08-10 08:48:46,583] {logging_mixin.py:104} INFO - Table `inventory` created successfully.
+[2024-08-10 08:48:46,584] {logging_mixin.py:104} INFO - Processing table: language
+[2024-08-10 08:48:46,593] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `language` (`language_id` INT NOT NULL, `name` LONGTEXT NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`language_id`))
+[2024-08-10 08:48:46,607] {logging_mixin.py:104} INFO - Table `language` created successfully.
+[2024-08-10 08:48:46,608] {logging_mixin.py:104} INFO - Processing table: sales_by_film_category
+[2024-08-10 08:48:46,618] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `sales_by_film_category` (`category` TEXT, `total_sales` DECIMAL)
+[2024-08-10 08:48:46,632] {logging_mixin.py:104} INFO - Table `sales_by_film_category` created successfully.
+[2024-08-10 08:48:46,632] {logging_mixin.py:104} INFO - Processing table: rental
+[2024-08-10 08:48:46,643] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `rental` (`rental_id` INT NOT NULL, `rental_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, `inventory_id` INT NOT NULL, `customer_id` INT NOT NULL, `return_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP, `staff_id` INT NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`rental_id`))
+[2024-08-10 08:48:46,657] {logging_mixin.py:104} INFO - Table `rental` created successfully.
+[2024-08-10 08:48:46,657] {logging_mixin.py:104} INFO - Processing table: staff
+[2024-08-10 08:48:46,668] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `staff` (`staff_id` INT NOT NULL, `first_name` TEXT NOT NULL, `last_name` TEXT NOT NULL, `address_id` INT NOT NULL, `email` TEXT, `store_id` INT NOT NULL, `active` BOOLEAN NOT NULL, `username` TEXT NOT NULL, `password` TEXT, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, `picture` BLOB, PRIMARY KEY (`staff_id`))
+[2024-08-10 08:48:46,683] {logging_mixin.py:104} INFO - Table `staff` created successfully.
+[2024-08-10 08:48:46,684] {logging_mixin.py:104} INFO - Processing table: sales_by_store
+[2024-08-10 08:48:46,693] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `sales_by_store` (`store` TEXT, `manager` TEXT, `total_sales` DECIMAL)
+[2024-08-10 08:48:46,705] {logging_mixin.py:104} INFO - Table `sales_by_store` created successfully.
+[2024-08-10 08:48:46,706] {logging_mixin.py:104} INFO - Processing table: staff_list
+[2024-08-10 08:48:46,716] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `staff_list` (`id` INT, `name` TEXT, `address` TEXT, `zip code` TEXT, `phone` TEXT, `city` TEXT, `country` TEXT, `sid` INT)
+[2024-08-10 08:48:46,733] {logging_mixin.py:104} INFO - Table `staff_list` created successfully.
+[2024-08-10 08:48:46,733] {logging_mixin.py:104} INFO - Processing table: payment
+[2024-08-10 08:48:46,744] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `payment` (`payment_id` INT NOT NULL, `customer_id` INT NOT NULL, `staff_id` INT NOT NULL, `rental_id` INT NOT NULL, `amount` DECIMAL(5,2) NOT NULL, `payment_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`payment_date`, `payment_id`))
+[2024-08-10 08:48:46,764] {logging_mixin.py:104} INFO - Table `payment` created successfully.
+[2024-08-10 08:48:46,764] {logging_mixin.py:104} INFO - Processing table: payment_p2022_02
+[2024-08-10 08:48:46,775] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `payment_p2022_02` (`payment_id` INT NOT NULL, `customer_id` INT NOT NULL, `staff_id` INT NOT NULL, `rental_id` INT NOT NULL, `amount` DECIMAL(5,2) NOT NULL, `payment_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`payment_date`, `payment_id`))
+[2024-08-10 08:48:46,788] {logging_mixin.py:104} INFO - Table `payment_p2022_02` created successfully.
+[2024-08-10 08:48:46,788] {logging_mixin.py:104} INFO - Processing table: payment_p2022_03
+[2024-08-10 08:48:46,798] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `payment_p2022_03` (`payment_id` INT NOT NULL, `customer_id` INT NOT NULL, `staff_id` INT NOT NULL, `rental_id` INT NOT NULL, `amount` DECIMAL(5,2) NOT NULL, `payment_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`payment_date`, `payment_id`))
+[2024-08-10 08:48:46,811] {logging_mixin.py:104} INFO - Table `payment_p2022_03` created successfully.
+[2024-08-10 08:48:46,811] {logging_mixin.py:104} INFO - Processing table: payment_p2022_07
+[2024-08-10 08:48:46,828] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `payment_p2022_07` (`payment_id` INT NOT NULL, `customer_id` INT NOT NULL, `staff_id` INT NOT NULL, `rental_id` INT NOT NULL, `amount` DECIMAL(5,2) NOT NULL, `payment_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`payment_date`, `payment_id`))
+[2024-08-10 08:48:46,844] {logging_mixin.py:104} INFO - Table `payment_p2022_07` created successfully.
+[2024-08-10 08:48:46,844] {logging_mixin.py:104} INFO - Processing table: payment_p2022_05
+[2024-08-10 08:48:46,902] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `payment_p2022_05` (`payment_id` INT NOT NULL, `customer_id` INT NOT NULL, `staff_id` INT NOT NULL, `rental_id` INT NOT NULL, `amount` DECIMAL(5,2) NOT NULL, `payment_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`payment_date`, `payment_id`))
+[2024-08-10 08:48:46,972] {logging_mixin.py:104} INFO - Table `payment_p2022_05` created successfully.
+[2024-08-10 08:48:46,972] {logging_mixin.py:104} INFO - Processing table: payment_p2022_06
+[2024-08-10 08:48:46,986] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `payment_p2022_06` (`payment_id` INT NOT NULL, `customer_id` INT NOT NULL, `staff_id` INT NOT NULL, `rental_id` INT NOT NULL, `amount` DECIMAL(5,2) NOT NULL, `payment_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`payment_date`, `payment_id`))
+[2024-08-10 08:48:47,003] {logging_mixin.py:104} INFO - Table `payment_p2022_06` created successfully.
+[2024-08-10 08:48:47,003] {logging_mixin.py:104} INFO - Processing table: store
+[2024-08-10 08:48:47,023] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `store` (`store_id` INT NOT NULL, `manager_staff_id` INT NOT NULL, `address_id` INT NOT NULL, `last_update` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`store_id`))
+[2024-08-10 08:48:47,038] {logging_mixin.py:104} INFO - Table `store` created successfully.
+[2024-08-10 08:48:47,038] {logging_mixin.py:104} INFO - Processing table: payment_p2022_01
+[2024-08-10 08:48:47,053] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `payment_p2022_01` (`payment_id` INT NOT NULL, `customer_id` INT NOT NULL, `staff_id` INT NOT NULL, `rental_id` INT NOT NULL, `amount` DECIMAL(5,2) NOT NULL, `payment_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`payment_date`, `payment_id`))
+[2024-08-10 08:48:47,072] {logging_mixin.py:104} INFO - Table `payment_p2022_01` created successfully.
+[2024-08-10 08:48:47,072] {logging_mixin.py:104} INFO - Processing table: payment_p2022_04
+[2024-08-10 08:48:47,093] {logging_mixin.py:104} INFO - Executing SQL: CREATE TABLE `payment_p2022_04` (`payment_id` INT NOT NULL, `customer_id` INT NOT NULL, `staff_id` INT NOT NULL, `rental_id` INT NOT NULL, `amount` DECIMAL(5,2) NOT NULL, `payment_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL, PRIMARY KEY (`payment_date`, `payment_id`))
+[2024-08-10 08:48:47,111] {logging_mixin.py:104} INFO - Table `payment_p2022_04` created successfully.
+[2024-08-10 08:48:47,112] {python.py:118} INFO - Done. Returned value was: None
+[2024-08-10 08:48:47,127] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=migrate_data_dag, task_id=run_create, execution_date=20240810T084843, start_date=20240810T084846, end_date=20240810T084847
+[2024-08-10 08:48:47,168] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-10 08:48:47,185] {local_task_job.py:146} INFO - Task exited with return code 0

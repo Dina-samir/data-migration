@@ -1,0 +1,30 @@
+[2024-08-10 08:42:12,500] {scheduler_job.py:182} INFO - Started process (PID=30486) to work on /opt/airflow/dags/testtt.py
+[2024-08-10 08:42:12,501] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/testtt.py for tasks to queue
+[2024-08-10 08:42:12,502] {logging_mixin.py:104} INFO - [2024-08-10 08:42:12,502] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/testtt.py
+[2024-08-10 08:42:12,502] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/testtt.py
+[2024-08-10 08:42:12,502] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/testtt.py took 0.005 seconds
+[2024-08-10 08:42:43,004] {scheduler_job.py:182} INFO - Started process (PID=30618) to work on /opt/airflow/dags/testtt.py
+[2024-08-10 08:42:43,005] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/testtt.py for tasks to queue
+[2024-08-10 08:42:43,006] {logging_mixin.py:104} INFO - [2024-08-10 08:42:43,006] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/testtt.py
+[2024-08-10 08:42:43,006] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/testtt.py
+[2024-08-10 08:42:43,006] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/testtt.py took 0.006 seconds
+[2024-08-10 08:42:49,742] {scheduler_job.py:182} INFO - Started process (PID=30684) to work on /opt/airflow/dags/testtt.py
+[2024-08-10 08:42:49,743] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/testtt.py for tasks to queue
+[2024-08-10 08:42:49,744] {logging_mixin.py:104} INFO - [2024-08-10 08:42:49,744] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/testtt.py
+[2024-08-10 08:42:49,744] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/testtt.py
+[2024-08-10 08:42:49,744] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/testtt.py took 0.005 seconds
+[2024-08-10 08:43:19,979] {scheduler_job.py:182} INFO - Started process (PID=30819) to work on /opt/airflow/dags/testtt.py
+[2024-08-10 08:43:19,981] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/testtt.py for tasks to queue
+[2024-08-10 08:43:19,981] {logging_mixin.py:104} INFO - [2024-08-10 08:43:19,981] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/testtt.py
+[2024-08-10 08:43:19,982] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/testtt.py
+[2024-08-10 08:43:19,982] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/testtt.py took 0.006 seconds
+[2024-08-10 08:43:50,794] {scheduler_job.py:182} INFO - Started process (PID=30954) to work on /opt/airflow/dags/testtt.py
+[2024-08-10 08:43:50,795] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/testtt.py for tasks to queue
+[2024-08-10 08:43:50,796] {logging_mixin.py:104} INFO - [2024-08-10 08:43:50,796] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/testtt.py
+[2024-08-10 08:43:50,796] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/testtt.py
+[2024-08-10 08:43:50,797] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/testtt.py took 0.007 seconds
+[2024-08-10 08:43:56,550] {scheduler_job.py:182} INFO - Started process (PID=30960) to work on /opt/airflow/dags/testtt.py
+[2024-08-10 08:43:56,551] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/testtt.py for tasks to queue
+[2024-08-10 08:43:56,552] {logging_mixin.py:104} INFO - [2024-08-10 08:43:56,552] {dagbag.py:451} INFO - Filling up the DagBag from /opt/airflow/dags/testtt.py
+[2024-08-10 08:43:56,552] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/testtt.py
+[2024-08-10 08:43:56,553] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/testtt.py took 0.007 seconds

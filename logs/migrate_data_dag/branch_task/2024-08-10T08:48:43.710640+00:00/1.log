@@ -1,0 +1,25 @@
+[2024-08-10 08:48:45,325] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: migrate_data_dag.branch_task 2024-08-10T08:48:43.710640+00:00 [queued]>
+[2024-08-10 08:48:45,336] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: migrate_data_dag.branch_task 2024-08-10T08:48:43.710640+00:00 [queued]>
+[2024-08-10 08:48:45,336] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-10 08:48:45,336] {taskinstance.py:1069} INFO - Starting attempt 1 of 2
+[2024-08-10 08:48:45,336] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-10 08:48:45,349] {taskinstance.py:1089} INFO - Executing <Task(BranchPythonOperator): branch_task> on 2024-08-10T08:48:43.710640+00:00
+[2024-08-10 08:48:45,353] {standard_task_runner.py:52} INFO - Started process 32187 to run task
+[2024-08-10 08:48:45,357] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'migrate_data_dag', 'branch_task', '2024-08-10T08:48:43.710640+00:00', '--job-id', '146', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpkkjc7toy', '--error-file', '/tmp/tmp1a_9jttu']
+[2024-08-10 08:48:45,359] {standard_task_runner.py:77} INFO - Job 146: Subtask branch_task
+[2024-08-10 08:48:45,397] {logging_mixin.py:104} INFO - Running <TaskInstance: migrate_data_dag.branch_task 2024-08-10T08:48:43.710640+00:00 [running]> on host bcea38538591
+[2024-08-10 08:48:45,432] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=migrate_data_dag
+AIRFLOW_CTX_TASK_ID=branch_task
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-10T08:48:43.710640+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-10T08:48:43.710640+00:00
+[2024-08-10 08:48:45,433] {logging_mixin.py:104} INFO - overwrite
+[2024-08-10 08:48:45,433] {python.py:118} INFO - Done. Returned value was: run_create
+[2024-08-10 08:48:45,433] {skipmixin.py:124} INFO - Following branch run_create
+[2024-08-10 08:48:45,440] {skipmixin.py:155} INFO - Skipping tasks ['run_dummy']
+[2024-08-10 08:48:45,483] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=migrate_data_dag, task_id=branch_task, execution_date=20240810T084843, start_date=20240810T084845, end_date=20240810T084845
+[2024-08-10 08:48:45,512] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-10 08:48:45,528] {local_task_job.py:146} INFO - Task exited with return code 0

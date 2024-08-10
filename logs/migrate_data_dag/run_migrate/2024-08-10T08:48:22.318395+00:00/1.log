@@ -1,0 +1,82 @@
+[2024-08-10 08:48:25,085] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: migrate_data_dag.run_migrate 2024-08-10T08:48:22.318395+00:00 [queued]>
+[2024-08-10 08:48:25,094] {taskinstance.py:877} INFO - Dependencies all met for <TaskInstance: migrate_data_dag.run_migrate 2024-08-10T08:48:22.318395+00:00 [queued]>
+[2024-08-10 08:48:25,094] {taskinstance.py:1068} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-10 08:48:25,095] {taskinstance.py:1069} INFO - Starting attempt 1 of 2
+[2024-08-10 08:48:25,095] {taskinstance.py:1070} INFO - 
+--------------------------------------------------------------------------------
+[2024-08-10 08:48:25,109] {taskinstance.py:1089} INFO - Executing <Task(PythonOperator): run_migrate> on 2024-08-10T08:48:22.318395+00:00
+[2024-08-10 08:48:25,112] {standard_task_runner.py:52} INFO - Started process 32183 to run task
+[2024-08-10 08:48:25,116] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'migrate_data_dag', 'run_migrate', '2024-08-10T08:48:22.318395+00:00', '--job-id', '144', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpiqadi3b2', '--error-file', '/tmp/tmp5t1oz_aj']
+[2024-08-10 08:48:25,119] {standard_task_runner.py:77} INFO - Job 144: Subtask run_migrate
+[2024-08-10 08:48:25,159] {logging_mixin.py:104} INFO - Running <TaskInstance: migrate_data_dag.run_migrate 2024-08-10T08:48:22.318395+00:00 [running]> on host bcea38538591
+[2024-08-10 08:48:25,197] {taskinstance.py:1283} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=migrate_data_dag
+AIRFLOW_CTX_TASK_ID=run_migrate
+AIRFLOW_CTX_EXECUTION_DATE=2024-08-10T08:48:22.318395+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2024-08-10T08:48:22.318395+00:00
+[2024-08-10 08:48:25,207] {base.py:78} INFO - Using connection to: id: postgres_source. Host: postgres, Port: 5432, Schema: source, Login: postgres, Password: XXXXXXXX, extra: None
+[2024-08-10 08:48:25,218] {base.py:78} INFO - Using connection to: id: mysql_dest. Host: mysql-db-migrate, Port: 3306, Schema: db, Login: root, Password: XXXXXXXX, extra: None
+[2024-08-10 08:48:25,246] {logging_mixin.py:104} INFO - Processing table: film_actor
+[2024-08-10 08:48:25,251] {logging_mixin.py:104} INFO - Table `film_actor` migrated successfully.
+[2024-08-10 08:48:25,251] {logging_mixin.py:104} INFO - Processing table: address
+[2024-08-10 08:48:25,253] {logging_mixin.py:104} INFO - Table `address` migrated successfully.
+[2024-08-10 08:48:25,253] {logging_mixin.py:104} INFO - Processing table: city
+[2024-08-10 08:48:25,255] {logging_mixin.py:104} INFO - Table `city` migrated successfully.
+[2024-08-10 08:48:25,256] {logging_mixin.py:104} INFO - Processing table: actor
+[2024-08-10 08:48:25,258] {logging_mixin.py:104} INFO - Table `actor` migrated successfully.
+[2024-08-10 08:48:25,258] {logging_mixin.py:104} INFO - Processing table: actor_info
+[2024-08-10 08:48:25,261] {logging_mixin.py:104} INFO - Table `actor_info` migrated successfully.
+[2024-08-10 08:48:25,261] {logging_mixin.py:104} INFO - Processing table: category
+[2024-08-10 08:48:25,262] {logging_mixin.py:104} INFO - Table `category` migrated successfully.
+[2024-08-10 08:48:25,263] {logging_mixin.py:104} INFO - Processing table: country
+[2024-08-10 08:48:25,264] {logging_mixin.py:104} INFO - Table `country` migrated successfully.
+[2024-08-10 08:48:25,264] {logging_mixin.py:104} INFO - Processing table: customer
+[2024-08-10 08:48:25,266] {logging_mixin.py:104} INFO - Table `customer` migrated successfully.
+[2024-08-10 08:48:25,266] {logging_mixin.py:104} INFO - Processing table: customer_list
+[2024-08-10 08:48:25,269] {logging_mixin.py:104} INFO - Table `customer_list` migrated successfully.
+[2024-08-10 08:48:25,269] {logging_mixin.py:104} INFO - Processing table: film_list
+[2024-08-10 08:48:25,272] {logging_mixin.py:104} INFO - Table `film_list` migrated successfully.
+[2024-08-10 08:48:25,272] {logging_mixin.py:104} INFO - Processing table: nicer_but_slower_film_list
+[2024-08-10 08:48:25,275] {logging_mixin.py:104} INFO - Table `nicer_but_slower_film_list` migrated successfully.
+[2024-08-10 08:48:25,276] {logging_mixin.py:104} INFO - Processing table: film
+[2024-08-10 08:48:25,277] {logging_mixin.py:104} INFO - Table `film` migrated successfully.
+[2024-08-10 08:48:25,278] {logging_mixin.py:104} INFO - Processing table: film_category
+[2024-08-10 08:48:25,280] {logging_mixin.py:104} INFO - Table `film_category` migrated successfully.
+[2024-08-10 08:48:25,280] {logging_mixin.py:104} INFO - Processing table: inventory
+[2024-08-10 08:48:25,289] {logging_mixin.py:104} INFO - Table `inventory` migrated successfully.
+[2024-08-10 08:48:25,289] {logging_mixin.py:104} INFO - Processing table: language
+[2024-08-10 08:48:25,291] {logging_mixin.py:104} INFO - Table `language` migrated successfully.
+[2024-08-10 08:48:25,292] {logging_mixin.py:104} INFO - Processing table: sales_by_film_category
+[2024-08-10 08:48:25,377] {logging_mixin.py:104} INFO - Table `sales_by_film_category` migrated successfully.
+[2024-08-10 08:48:25,378] {logging_mixin.py:104} INFO - Processing table: rental
+[2024-08-10 08:48:25,389] {logging_mixin.py:104} INFO - Table `rental` migrated successfully.
+[2024-08-10 08:48:25,390] {logging_mixin.py:104} INFO - Processing table: staff
+[2024-08-10 08:48:25,391] {logging_mixin.py:104} INFO - Table `staff` migrated successfully.
+[2024-08-10 08:48:25,391] {logging_mixin.py:104} INFO - Processing table: sales_by_store
+[2024-08-10 08:48:25,441] {logging_mixin.py:104} INFO - Table `sales_by_store` migrated successfully.
+[2024-08-10 08:48:25,441] {logging_mixin.py:104} INFO - Processing table: staff_list
+[2024-08-10 08:48:25,444] {logging_mixin.py:104} INFO - Table `staff_list` migrated successfully.
+[2024-08-10 08:48:25,444] {logging_mixin.py:104} INFO - Processing table: payment
+[2024-08-10 08:48:25,457] {logging_mixin.py:104} INFO - Table `payment` migrated successfully.
+[2024-08-10 08:48:25,457] {logging_mixin.py:104} INFO - Processing table: payment_p2022_02
+[2024-08-10 08:48:25,460] {logging_mixin.py:104} INFO - Table `payment_p2022_02` migrated successfully.
+[2024-08-10 08:48:25,460] {logging_mixin.py:104} INFO - Processing table: payment_p2022_03
+[2024-08-10 08:48:25,467] {logging_mixin.py:104} INFO - Table `payment_p2022_03` migrated successfully.
+[2024-08-10 08:48:25,467] {logging_mixin.py:104} INFO - Processing table: payment_p2022_07
+[2024-08-10 08:48:25,470] {logging_mixin.py:104} INFO - Table `payment_p2022_07` migrated successfully.
+[2024-08-10 08:48:25,470] {logging_mixin.py:104} INFO - Processing table: payment_p2022_05
+[2024-08-10 08:48:25,473] {logging_mixin.py:104} INFO - Table `payment_p2022_05` migrated successfully.
+[2024-08-10 08:48:25,473] {logging_mixin.py:104} INFO - Processing table: payment_p2022_06
+[2024-08-10 08:48:25,476] {logging_mixin.py:104} INFO - Table `payment_p2022_06` migrated successfully.
+[2024-08-10 08:48:25,476] {logging_mixin.py:104} INFO - Processing table: store
+[2024-08-10 08:48:25,478] {logging_mixin.py:104} INFO - Table `store` migrated successfully.
+[2024-08-10 08:48:25,478] {logging_mixin.py:104} INFO - Processing table: payment_p2022_01
+[2024-08-10 08:48:25,481] {logging_mixin.py:104} INFO - Table `payment_p2022_01` migrated successfully.
+[2024-08-10 08:48:25,481] {logging_mixin.py:104} INFO - Processing table: payment_p2022_04
+[2024-08-10 08:48:25,486] {logging_mixin.py:104} INFO - Table `payment_p2022_04` migrated successfully.
+[2024-08-10 08:48:25,486] {python.py:118} INFO - Done. Returned value was: None
+[2024-08-10 08:48:25,502] {taskinstance.py:1192} INFO - Marking task as SUCCESS. dag_id=migrate_data_dag, task_id=run_migrate, execution_date=20240810T084822, start_date=20240810T084825, end_date=20240810T084825
+[2024-08-10 08:48:25,549] {taskinstance.py:1246} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-08-10 08:48:25,569] {local_task_job.py:146} INFO - Task exited with return code 0
