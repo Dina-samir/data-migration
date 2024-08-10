@@ -43,15 +43,14 @@ Ensure you have the following installed:
 - Docker Compose: [Install Docker Compose](https://docs.docker.com/compose/install/)
 
 ## Directory Structure
-.
-├── dags
-│   └── migrate_data_dag.py   # The Airflow DAG for migrating data
-├── logs                      # Directory for Airflow logs
-├── plugins                   # Directory for custom Airflow plugins
-├── data_mysql                # MySQL data directory
-├── init.sql                  # SQL script to initialize Postgres
-├── source.sql                # SQL script to populate the Postgres database
-└── docker-compose.yaml       # Docker Compose configuration file
+
+- dags - migrate_data_dag.py # The Airflow DAG for migrating data
+- logs                       # Directory for Airflow logs
+- plugins                    # Directory for custom Airflow plugins
+- data_mysql                 # MySQL data directory
+- init.sql                   # SQL script to initialize Postgres
+- source.sql                 # SQL script to populate the Postgres database
+- docker-compose.yaml        # Docker Compose configuration file
 
 ## Setup Instructions
 
