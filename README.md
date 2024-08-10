@@ -56,8 +56,8 @@ Ensure you have the following installed:
 
 ### 1: Download Docker Compose YAML
 download the Airflow Docker Compose configuration:
-bash
-curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.0.2/docker-compose.yaml'
+- bash
+- curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.0.2/docker-compose.yaml'
 
 ### 2: Create Environment Variables
 Create a .env file to define user IDs for the Docker containers:
