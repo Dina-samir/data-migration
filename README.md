@@ -18,9 +18,6 @@ This project sets up a data migration pipeline using Apache Airflow, PostgreSQL,
   - [DAG Structure](#dag-structure)
   - [Key Functions](#key-functions)
   - [Running the DAG](#running-the-dag)
-- [Customization](#customization)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
 
 
 
