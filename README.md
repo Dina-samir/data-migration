@@ -56,22 +56,23 @@ Ensure you have the following installed:
 
 ### 1: Download Docker Compose YAML
 download the Airflow Docker Compose configuration:
-- bash
-- curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.0.2/docker-compose.yaml'
+
+    bash: curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.0.2/docker-compose.yaml'
 
 ### 2: Create Environment Variables
 Create a .env file to define user IDs for the Docker containers:
-bash
-echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
+
+    bash: echo -e "AIRFLOW_UID=$(id -u)\nAIRFLOW_GID=0" > .env
 
 ### 3: Edit docker-compose.yaml
 The docker-compose.yaml has been customized to include:
-    A PostgreSQL service with initialization scripts.
-    A MySQL service for the migration target.
+
+    A PostgreSQL: service with initialization scripts.
+    A MySQL: service for the migration target.
 
 ### 4: Initialize and Start Services
-bash
-docker-compose up -d
+
+    bash: docker-compose up -d
 
 ### 5: Access Airflow Web UI
 The Airflow web server will be accessible at http://localhost:8090.
