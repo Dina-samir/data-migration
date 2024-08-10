@@ -67,8 +67,8 @@ Create a .env file to define user IDs for the Docker containers:
 ### 3: Edit docker-compose.yaml
 The docker-compose.yaml has been customized to include:
 
-    A PostgreSQL: service with initialization scripts.
-    A MySQL: service for the migration target.
+- A PostgreSQL: service with initialization scripts.
+- A MySQL: service for the migration target.
 
 ### 4: Initialize and Start Services
 
@@ -103,11 +103,11 @@ Checks that the number of records in the PostgreSQL tables matches the number of
 
 ### Key Functions
 
-    map_postgres_to_mysql(pg_type): Maps PostgreSQL data types to MySQL equivalents.
-    convert_lists_to_string(row): Converts lists in data to JSON strings.
-    create_mysql_tables(**kwargs): Creates MySQL tables based on the schema from PostgreSQL.
-    migrate_all_tables(**kwargs): Migrates data from PostgreSQL to MySQL, either appending or overwriting data based on the DAG configuration.
-    decide_branch(**kwargs): Determines whether to run the table creation task or skip it.
+  - map_postgres_to_mysql(pg_type): Maps PostgreSQL data types to MySQL equivalents.
+  - convert_lists_to_string(row): Converts lists in data to JSON strings.
+  - create_mysql_tables(**kwargs): Creates MySQL tables based on the schema from PostgreSQL.
+  - migrate_all_tables(**kwargs): Migrates data from PostgreSQL to MySQL, either appending or overwriting data based on the DAG configuration.
+  - decide_branch(**kwargs): Determines whether to run the table creation task or skip it.
 
 ### Running the DAG
 
@@ -121,8 +121,8 @@ You can modify the migration type by passing a parameter to the DAG run:
 
 Example Trigger Command
 To trigger the DAG with an overwrite option, you can use the following Airflow CLI command:
-bash
-airflow dags trigger migrate_data_dag -c '{"type":"overwrite"}'
+
+    bash: airflow dags trigger migrate_data_dag -c '{"type":"overwrite"}'
 
 
 
