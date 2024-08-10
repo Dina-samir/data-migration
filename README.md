@@ -86,16 +86,11 @@ The migrate_data_dag is designed to migrate data from PostgreSQL to MySQL. It su
 
 ### DAG Structure
 
-#### Branch Task: 
-Decides whether to append data or overwrite existing tables.
-#### Create MySQL Tables: 
-Drops and recreates tables in MySQL based on the PostgreSQL schema.
-#### Migrate Data: 
-Transfers data from PostgreSQL to MySQL. For append we used last_update column for tables contain it and select max(id) for tables not contain last_update column
-#### Dummy Task: 
-A placeholder task for when no table recreation is needed.
-#### Data Completeness Task: 
-Checks that the number of records in the PostgreSQL tables matches the number of records in the corresponding MySQL tables after migration.
+**Branch Task:** Decides whether to append data or overwrite existing tables.
+**Create MySQL Tables:** Drops and recreates tables in MySQL based on the PostgreSQL schema.
+**Migrate Data:** Transfers data from PostgreSQL to MySQL. For append we used last_update column for tables contain it and select max(id) for tables not contain last_update column
+**Dummy Task:** A placeholder task for when no table recreation is needed.
+**Data Completeness Task:** Checks that the number of records in the PostgreSQL tables matches the number of records in the corresponding MySQL tables after migration.
                        
 
 ### Key Functions
